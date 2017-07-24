@@ -1,7 +1,7 @@
 # easy-vue
 The demo explan how the vue work.简单模拟vue
 # I just wish we can learn some from this demo.Though it is very easy.
-![image](https://github.com/atoanofish/easy-vue/blob/master/img/demo.gif)
+![image](https://github.com/atoanofish/simple-vue/blob/master/img/demo.gif)
 ## Reactivity in Depth
 ### let us see the reactivity in depth:
 
@@ -15,9 +15,9 @@ Every component instance has a corresponding watcher instance, which records any
   把一个普通 JavaScript 对象传给 Vue 实例的 data 选项，Vue 将遍历此对象所有的属性，并使用 Object.defineProperty 把这些属性全部转为 getter/setter。Object.defineProperty 是仅 ES5 支持，且无法 shim 的特性，这也就是为什么 Vue 不支持 IE8 以及更低版本浏览器的原因。
 用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。这里需要注意的问题是浏览器控制台在打印数据对象时 getter/setter 的格式化并不同，所以你可能需要安装 vue-devtools 来获取更加友好的检查接口。
 每个组件实例都有相应的 watcher 实例对象，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的 setter 被调用时，会通知 watcher 重新计算，从而致使它关联的组件得以更新。
-![image](https://github.com/atoanofish/easy-vue/blob/master/img/work.png)
+![image](https://github.com/atoanofish/simple-vue/blob/master/img/work.png)
 ## We can understand that
-![image](https://github.com/atoanofish/easy-vue/blob/master/img/work1.png)
+![image](https://github.com/atoanofish/simple-vue/blob/master/img/work1.png)
 
 ### Now if we want to do a vue.js ,we must do that:
 * 1, The implementation of a data listener Observer, can be all attributes of the data object to monitor, if changes, you can get the > latest value and notify the subscriber
