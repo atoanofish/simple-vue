@@ -1,7 +1,7 @@
 # easy-vue
 The demo explan how the vue work.简单模拟vue
 # I just wish we can learn some from this demo.Though it is very easy.
-![image](https://github.com/atoanofish/easy-vue/blob/master/img/demo.png)
+![image](https://github.com/atoanofish/easy-vue/blob/master/img/demo.gif)
 ## Reactivity in Depth
 ### let us see the reactivity in depth:
 
