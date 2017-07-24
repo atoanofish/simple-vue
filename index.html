@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="app">
+    <input v-model="obj.children.name">
+    <input v-model="obj.name">
+    <div>
+        <label>INPUT 1:</label>
+        <span v-text="obj.children.name"></span>
+    </div>
+    <div>
+        <label>INPUT 2:</label>
+        <span v-text="obj.name"></span>
+    </div>
+</body>
+<script type="text/javascript" src="./src/Vue.js"></script>
+<script type="text/javascript" src="./src/watcher.js"></script>
+<script type="text/javascript" src="./src/observer.js"></script>
+<script type="text/javascript" src="./src/compile.js"></script>
+
+<script >
+    var vm = new EasyVue({
+        el: 'app',
+        data: {
+            name: 'majian',
+            obj: {
+                name: '1',
+                age: '15',
+                children: {
+                    age: '11',
+                    name: '22'
+                }
+            }
+        },
+        mounted() {
+             this.data.obj.children.name = 'mounted 之后赋值的';
+             console.log(this.data);
+        }
+    });
+</script>
+</html>
